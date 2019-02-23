@@ -39,6 +39,18 @@ void HomeScreen::update(sf::RenderWindow &window, sf::Event event)
 		exploreButton.setColor(BUTTON_HOVER_COLOR);
 	else
 		exploreButton.setColor(BUTTON_ORIGINAL_COLOR);
+
+
+	// buttons are clicked...
+	if (input.mouseClick(sf::Mouse::Button::Left) && input.mouseHover(myGroupsButton, window))
+	{
+		std::cout << "MyGroups clicked" << std::endl; // new myGroupsScreen
+	}
+
+	if (input.mouseClick(sf::Mouse::Button::Left) && input.mouseHover(exploreButton, window))
+	{
+		std::cout << "ExploreButton clicked" << std::endl; // new exploreGroupsScreen
+	}
 }
 
 void HomeScreen::draw(sf::RenderWindow &window)

@@ -1,5 +1,6 @@
 #pragma once
 
+#include "FadeAnimation.h"
 #include "InputManager.h"
 #include "Button.h"
 

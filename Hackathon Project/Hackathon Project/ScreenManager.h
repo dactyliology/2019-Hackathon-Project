@@ -1,8 +1,8 @@
 #pragma once
 
 #include "TitleScreen.h"
-#include "FadeAnimation.h"
 #include "HomeScreen.h"
+#include "myGroupsScreen.h"
 
 #define SCREEN_WIDTH 508
 #define SCREEN_HEIGHT 900

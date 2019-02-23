@@ -154,6 +154,7 @@
     <ClCompile Include="HomeScreen.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="myGroupsScreen.cpp" />
     <ClCompile Include="ScreenManager.cpp" />
     <ClCompile Include="TitleScreen.cpp" />
   </ItemGroup>
@@ -164,6 +165,7 @@
     <ClInclude Include="FadeAnimation.h" />
     <ClInclude Include="HomeScreen.h" />
     <ClInclude Include="InputManager.h" />
+    <ClInclude Include="myGroupsScreen.h" />
     <ClInclude Include="Screen.h" />
     <ClInclude Include="ScreenManager.h" />
     <ClInclude Include="TitleScreen.h" />
