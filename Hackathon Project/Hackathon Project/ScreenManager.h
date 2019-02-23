@@ -1,6 +1,7 @@
 #include "Definitions.h"
 #include "TitleScreen.h"
 #include "FadeAnimation.h"
+#include "Screen.h"
 
 #define SCREEN_WIDTH 549
 #define SCREEN_HEIGHT 976
@@ -47,7 +48,4 @@ private:
 	bool isTransition;
 
 	FadeAnimation fade;
-	
-
-
 };
