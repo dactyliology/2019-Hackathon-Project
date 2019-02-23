@@ -13,8 +13,8 @@ void GroupsTile::loadContent()
 
 void GroupsTile::setPositionFromArrayIndex(int index, int gap, int offset)
 {
-	float x = (index % 2) * (gap + offset) + gap;
-	float y = (index / 2) * (gap + offset) + offset;
+	float x = (index % 2) * (gap + this->getGlobalBounds().width) + gap;
+	float y = (index / 2) * (gap + this->getGlobalBounds().height) + offset;
 
 	this->setPosition(x, y);
 }

@@ -1,5 +1,2 @@
-computer science
-121
-cpts
-contactlink
-5
+computer science,121,cpts,contactlink,5
+buisiness,102,bs,contactLInk,3
