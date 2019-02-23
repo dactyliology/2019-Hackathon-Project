@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Screen.h"
-#include "myGroupsScreen.h"
+#include "ScreenManager.h"
 
 
 class HomeScreen : public Screen
