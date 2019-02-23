@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Definitions.h"
+#include "InputManager.h"
 
 // Base class for all the screens in the app
 
@@ -21,6 +22,8 @@ public:
 	virtual void draw(sf::RenderWindow &window) = 0;
 
 protected:
+	InputManager input;
+
 	sf::Texture backgroundTexture; // image for background
 	sf::Sprite backgroundSprite; // sprite to set background
 };

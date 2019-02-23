@@ -5,7 +5,7 @@
 class InputManager
 {
 public:
-	void loadContent(sf::Event newEvent);
+	void update(sf::Event newEvent);
 
 	bool mouseClick(sf::Mouse::Button button);
 	bool mouseHover(sf::Sprite &object, sf::RenderWindow &window);

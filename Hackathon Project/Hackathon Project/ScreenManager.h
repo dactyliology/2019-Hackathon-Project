@@ -1,7 +1,8 @@
-#include "Definitions.h"
+#pragma once
+
 #include "TitleScreen.h"
 #include "FadeAnimation.h"
-#include "Screen.h"
+
 
 #define SCREEN_WIDTH 549
 #define SCREEN_HEIGHT 976
