@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Definitions.h"
 #include "InputManager.h"
+#include "Button.h"
 
 // Base class for all the screens in the app
 

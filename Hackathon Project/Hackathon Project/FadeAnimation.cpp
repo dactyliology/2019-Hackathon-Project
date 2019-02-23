@@ -1,12 +1,10 @@
 #include "FadeAnimation.h"
 
-void FadeAnimation::loadContent()
+void FadeAnimation::loadContent(std::string newText, sf::Texture newTexture, sf::Vector2f newPosition)
 {
+	Animation::loadContent(preText, spriteTexture, position);
 	increase = false;
 	fadeSpeed = FADESPEED;
-
-	alpha = 1.0f;
-	active = false;
 }
 
 void FadeAnimation::unloadContent()
@@ -19,10 +17,9 @@ void FadeAnimation::update(sf::Time deltaTime)
 	if (active)
 	{
 		if (!increase)
-			alpha -= deltaTime.asSeconds() * fadeSpeed;
+			alpha -= deltaTime.asSeconds() * fadeSpeed; // Might need to change
 		else
-			alpha += deltaTime.asSeconds() * fadeSpeed;
-
+			alpha += deltaTime.asSeconds() * fadeSpeed; // Using time increases the fade speed
 		if (alpha >= 1.0f) // opacity >= 255
 		{
 			alpha = 1.0f; // opacity = 100%
@@ -40,9 +37,9 @@ void FadeAnimation::update(sf::Time deltaTime)
 	}
 }
 
-void FadeAnimation::draw(sf::RenderWindow & window)
+void FadeAnimation::draw(sf::RenderWindow &window)
 {
-
+	Animation::draw(window);
 }
 
 void FadeAnimation::setAlpha(double val)
@@ -52,14 +49,4 @@ void FadeAnimation::setAlpha(double val)
 		increase = true;
 	else
 		increase = false;
-}
-
-float FadeAnimation::getAlpha()
-{
-	return alpha;
-}
-
-void FadeAnimation::setActive(bool val)
-{
-	active = val;
 }

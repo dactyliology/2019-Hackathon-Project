@@ -2,51 +2,34 @@
 
 #include "TitleScreen.h"
 #include "FadeAnimation.h"
+#include "HomeScreen.h"
 
-
-#define SCREEN_WIDTH 549
-#define SCREEN_HEIGHT 976
+#define SCREEN_WIDTH 508
+#define SCREEN_HEIGHT 900
 
 class ScreenManager
 {
 public:
-	//~ScreenManager();
+	static ScreenManager & getInstance(); // Can only make one instantiation since static
 
-	// Allows us to access one instance of the screenmanager. We will call this in main.
-	static ScreenManager & getInstance();
-
-	// Initialize the ScreenManager instance.
 	void initialize();
-
-	// Load the content of current screen
 	void loadContent();
-
-	// Unload content of screen
 	void unloadContent();
-
-	// Update the screens. Manage the transitions between screens.
-	void update(sf::RenderWindow &window, sf::Event event, sf::Time deltaTime);
-
-	// Draw the screen to the window
+	void update(sf::RenderWindow & window, sf::Event event, sf::Time deltaTime);
 	void draw(sf::RenderWindow &window);
 
-	// Add a new screen.
-	void addScreen(Screen *newScreen);
+	void addScreen(Screen *screen);
 
-	float getAlpha();
+	double getAlpha();
 
+
+protected:
 private:
-	Screen *currentScreen, *addedScreen; // should probably be a stack later to faciliate page switching
-
-	// Put constructor, copy constructor, and assignment here so new instances of the object
-	// won't "accidentally" be created.
-	/*ScreenManager();
-	ScreenManager(ScreenManager const &other);
-	void operator=(ScreenManager const &other);*/
+	Screen *currentScreen, *newScreen; // will be using polymorphism
 
 	void transition(sf::Time deltaTime);
-
 	bool isTransition;
 
 	FadeAnimation fade;
+
 };

@@ -32,6 +32,7 @@ int main()
 		fade.setFillColor(sf::Color(0, 0, 0, 255 * ScreenManager::getInstance().getAlpha()));
 
 		ScreenManager::getInstance().draw(window);
+		window.draw(fade);
 
 		window.display();
 	}

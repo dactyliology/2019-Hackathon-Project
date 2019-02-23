@@ -148,17 +148,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Animation.cpp" />
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="FadeAnimation.cpp" />
+    <ClCompile Include="HomeScreen.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ScreenManager.cpp" />
     <ClCompile Include="TitleScreen.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Animation.h" />
     <ClInclude Include="Button.h" />
     <ClInclude Include="Definitions.h" />
     <ClInclude Include="FadeAnimation.h" />
+    <ClInclude Include="HomeScreen.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="Screen.h" />
     <ClInclude Include="ScreenManager.h" />
