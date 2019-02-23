@@ -21,7 +21,7 @@ int main()
 
 		while (window.pollEvent(event))
 		{
-			if (event.type == sf::Event::Closed)
+			if (event.type == sf::Event::Closed || event.key.code == sf::Keyboard::Key::Escape)
 				window.close();
 		}
 
