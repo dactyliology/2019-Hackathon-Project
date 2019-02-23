@@ -9,6 +9,9 @@ public:
 	void draw(sf::RenderWindow & window);
 
 	void setAlpha(double val);
+	float getAlpha();
+	void setActive(bool val);
+
 
 private:
 	bool increase;

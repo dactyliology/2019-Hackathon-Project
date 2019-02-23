@@ -27,7 +27,7 @@
     <ClCompile Include="TitleScreen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="HomeScreen.cpp">
+    <ClCompile Include="FadeAnimation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -44,7 +44,7 @@
     <ClInclude Include="TitleScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="HomeScreen.h">
+    <ClInclude Include="FadeAnimation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
