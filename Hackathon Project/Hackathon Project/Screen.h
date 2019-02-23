@@ -20,7 +20,7 @@ public:
 	// Does the drawing to the screen.
 	virtual void draw(sf::RenderWindow &window);
 
-private:
+protected:
 	sf::Texture backgroundTexture; // image for background
 	sf::Sprite backgroundSprite; // sprite to set background
 };
