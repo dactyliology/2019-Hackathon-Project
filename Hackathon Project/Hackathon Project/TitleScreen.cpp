@@ -16,12 +16,12 @@ void TitleScreen::unloadContent()
 	
 }
 
-void TitleScreen::update(sf::Event event)
+void TitleScreen::update(sf::RenderWindow &window, sf::Event event)
 {
 
 }
 
-void TitleScreen::draw(sf::RenderWindow & window, sf::Event event)
+void TitleScreen::draw(sf::RenderWindow & window)
 {
-
+	window.draw(backgroundSprite);
 }

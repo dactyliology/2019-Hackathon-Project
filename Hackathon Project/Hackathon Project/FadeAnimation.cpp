@@ -42,7 +42,7 @@ void FadeAnimation::update(sf::Time deltaTime)
 
 void FadeAnimation::draw(sf::RenderWindow & window)
 {
-	window.draw();
+
 }
 
 void FadeAnimation::setAlpha(double val)
@@ -52,4 +52,14 @@ void FadeAnimation::setAlpha(double val)
 		increase = true;
 	else
 		increase = false;
+}
+
+float FadeAnimation::getAlpha()
+{
+	return alpha;
+}
+
+void FadeAnimation::setActive(bool val)
+{
+	active = val;
 }
