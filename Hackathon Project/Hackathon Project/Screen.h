@@ -5,11 +5,11 @@
 // Base class for all the screens in the app
 
 
-class Screen
+class Screen //abstract class
 {
 public:
 	// Takes care of loading each screen's background image, buttons, etc.
-	virtual void loadContent();
+	virtual void loadContent() = 0; //made this pure virtual so we can override it in future 
 
 	// If there's anything that needs to be saved/destroyed/etc called here.
 	virtual void unloadContent();
