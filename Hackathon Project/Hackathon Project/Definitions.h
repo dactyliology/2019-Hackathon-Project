@@ -5,6 +5,7 @@
 #include <SFML\Window.hpp>
 #include <SFML\System.hpp>
 #include <string>
+#include <fstream>
 
 // Page transition speed
 
@@ -14,6 +15,7 @@
 
 #define TITLESCREEN "TitleScreen.png"
 #define HOMESCREEN "HomeScreen.png"
+#define MYGROUPS_SCREEN ""
 
 /////////////////////////////////////////////////////////
 
@@ -23,3 +25,4 @@
 ///////////////////////////////// BUTTON IMAGES ////////////////////////////
 #define MYGROUPS_BUTTON "myGroupsButton.png"
 #define EXPLORE_BUTTON "ExploreButton.png"
+#define GROUPS_TILE "GroupsTile.png"

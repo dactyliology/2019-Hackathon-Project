@@ -42,6 +42,9 @@
     <ClCompile Include="myGroupsScreen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GroupsTile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Definitions.h">
@@ -74,5 +77,11 @@
     <ClInclude Include="myGroupsScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="GroupsTile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="myGroupsData.txt" />
   </ItemGroup>
 </Project>
