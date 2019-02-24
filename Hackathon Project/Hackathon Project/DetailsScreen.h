@@ -16,8 +16,8 @@ public:
 private:
 	sf::Font font;
 	sf::Text textSections[4][2];
-	/*sf::Text nameHeader;
-	sf::Text departmentHeader;
-	sf::Text linkHeader;*/
+	
+	Button homeButton;
+	Button backButton;
 
 };

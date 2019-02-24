@@ -5,22 +5,22 @@ DetailsScreen::DetailsScreen(GroupsTile &newTile)
 	for (int i = 0; i < 4; i++)
 		textSections[i][0].setStyle(sf::Text::Style::Bold);
 	textSections[0][0].setString("Class Name:\n");
-	textSections[0][0].setPosition(100, 200);
+	textSections[0][0].setPosition(100, 220);
 	textSections[1][0].setString("Department:\n");
-	textSections[1][0].setPosition(100, 340);
+	textSections[1][0].setPosition(100, 360);
 	textSections[2][0].setString("Group Link:\n");
-	textSections[2][0].setPosition(100, 480);
+	textSections[2][0].setPosition(100, 500);
 	textSections[3][0].setString("User Rating:\n");
-	textSections[3][0].setPosition(100, 620);
+	textSections[3][0].setPosition(100, 640);
 
 	textSections[0][1].setString(newTile.classAbbreviation + ' ' + newTile.classNumber);
-	textSections[0][1].setPosition(100, 250);
+	textSections[0][1].setPosition(100, 270);
 	textSections[1][1].setString(newTile.department);
-	textSections[1][1].setPosition(100, 390);
+	textSections[1][1].setPosition(100, 410);
 	textSections[2][1].setString(newTile.contactLink);
-	textSections[2][1].setPosition(100, 530);
+	textSections[2][1].setPosition(100, 550);
 	textSections[3][1].setString(newTile.rating);
-	textSections[3][1].setPosition(100, 670);
+	textSections[3][1].setPosition(100, 690);
 }
 
 
@@ -39,6 +39,8 @@ void DetailsScreen::loadContent()
 			}
 		}
 
+		textSections[2][1].setColor(sf::Color::Blue);
+
 	}
 	else
 		std::cout << "Could not load details font" << std::endl;
@@ -51,6 +53,12 @@ void DetailsScreen::loadContent()
 	}
 	else
 		std::cout << "Could not load details screen background" << std::endl;
+
+	homeButton.loadContent(HOME_BUTTON);
+	backButton.loadContent(BACK_BUTTON);
+
+	homeButton.setPosition(450, 25);
+	backButton.setPosition(199, 800);
 
 }
 
@@ -77,4 +85,6 @@ void DetailsScreen::draw(sf::RenderWindow &window)
 		for (int j = 0; j < 2; j++)
 			window.draw(textSections[i][j]);
 	}
+	window.draw(homeButton);
+	window.draw(backButton);
 }

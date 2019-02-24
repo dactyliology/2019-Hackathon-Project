@@ -28,7 +28,7 @@ void myGroupsScreen::loadContent()
 	}
 
 	homeButton.loadContent(HOME_BUTTON);
-	homeButton.setPosition(468, 0);
+	homeButton.setPosition(450, 25);
 }
 
 void myGroupsScreen::unloadContent()
@@ -71,6 +71,7 @@ void myGroupsScreen::draw(sf::RenderWindow &window)
 {
 	window.draw(backgroundSprite);
 	displayTiles(window);
+	window.draw(homeButton);
 }
 
 void myGroupsScreen::loadFileData()
