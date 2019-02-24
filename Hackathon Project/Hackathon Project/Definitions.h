@@ -10,7 +10,7 @@
 
 // Page transition speed
 
-#define FADESPEED 10 
+#define FADESPEED 20 
 #define FONT "font.ttf"
 #define TEXT_COLOR sf::Color::Black
 

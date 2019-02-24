@@ -71,10 +71,11 @@ void DetailsScreen::update(sf::RenderWindow &window, sf::Event event)
 {
 	input.update(event);
 
-	if (input.mouseClick(sf::Mouse::Left))
-	{
-		std::cout << "Click" << std::endl;
-	}
+	if (input.mouseClick(sf::Mouse::Left) && input.mouseHover(homeButton, window))
+		ScreenManager::getInstance().addScreen(new HomeScreen);
+	if (input.mouseClick(sf::Mouse::Left) && input.mouseHover(backButton, window))
+		ScreenManager::getInstance().addScreen(new myGroupsScreen);
+
 }
 
 void DetailsScreen::draw(sf::RenderWindow &window)
