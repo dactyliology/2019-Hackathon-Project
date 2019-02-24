@@ -20,6 +20,7 @@
 #define HOMESCREEN "HomeScreen.png"
 #define MYGROUPS_SCREEN "MyGroupsScreen.png"
 #define DETAILS_SCREEN "DetailsScreen.png"
+#define EXPLOREGROUPS_SCREEN "ExploreGroups.png"
 
 /////////////////////////////////////////////////////////
 
@@ -32,3 +33,4 @@
 #define GROUPS_TILE "GroupsTile.png"
 #define HOME_BUTTON "HomeButton.png"
 #define BACK_BUTTON "BackButton.png"
+#define ADD_BUTTON "AddButton.png"

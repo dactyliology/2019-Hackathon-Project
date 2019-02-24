@@ -4,6 +4,7 @@
 #include "HomeScreen.h"
 #include "myGroupsScreen.h"
 #include "DetailsScreen.h"
+#include "ExploreGroupsScreen.h"
 
 #define SCREEN_WIDTH 508
 #define SCREEN_HEIGHT 900

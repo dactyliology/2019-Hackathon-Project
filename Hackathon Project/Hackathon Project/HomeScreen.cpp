@@ -49,7 +49,7 @@ void HomeScreen::update(sf::RenderWindow &window, sf::Event event)
 
 	if (input.mouseClick(sf::Mouse::Button::Left) && input.mouseHover(exploreButton, window))
 	{
-		std::cout << "ExploreButton clicked" << std::endl; // new exploreGroupsScreen
+		ScreenManager::getInstance().addScreen(new ExploreGroupsScreen);
 	}
 }
 

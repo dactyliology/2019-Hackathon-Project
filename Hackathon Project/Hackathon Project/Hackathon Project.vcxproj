@@ -151,6 +151,7 @@
     <ClCompile Include="Animation.cpp" />
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="DetailsScreen.cpp" />
+    <ClCompile Include="ExploreGroupsScreen.cpp" />
     <ClCompile Include="FadeAnimation.cpp" />
     <ClCompile Include="GroupsTile.cpp" />
     <ClCompile Include="HomeScreen.cpp" />
@@ -165,6 +166,7 @@
     <ClInclude Include="Button.h" />
     <ClInclude Include="Definitions.h" />
     <ClInclude Include="DetailsScreen.h" />
+    <ClInclude Include="ExploreGroupsScreen.h" />
     <ClInclude Include="FadeAnimation.h" />
     <ClInclude Include="GroupsTile.h" />
     <ClInclude Include="HomeScreen.h" />
@@ -176,6 +178,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="myGroupsData.txt" />
+    <Text Include="TileLibrary.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

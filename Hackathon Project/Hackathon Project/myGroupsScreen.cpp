@@ -54,7 +54,7 @@ void myGroupsScreen::update(sf::RenderWindow &window, sf::Event event)
 	{
 		if (input.mouseClick(sf::Mouse::Left) && input.mouseHover(myGroupsTiles[i], window))
 		{
-			ScreenManager::getInstance().addScreen(new DetailsScreen(myGroupsTiles[i]));
+			ScreenManager::getInstance().addScreen(new DetailsScreen(myGroupsTiles[i], 0));
 		}
 	}
 

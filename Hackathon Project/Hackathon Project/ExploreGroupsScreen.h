@@ -1,26 +1,26 @@
 #pragma once
 
-#include "Screen.h"
 #include "ScreenManager.h"
+#include "Screen.h"
 #include "GroupsTile.h"
-#include "myGroupsScreen.h"
 
-class DetailsScreen : public Screen
+class ExploreGroupsScreen : public Screen
 {
 public:
-	DetailsScreen(GroupsTile &newTile, int chooseMode);
 	void loadContent();
 	void unloadContent();
 	void update(sf::RenderWindow &window, sf::Event event);
 	void draw(sf::RenderWindow &window);
 
 private:
-	sf::Font font;
-	sf::Text textSections[4][2];
+	void loadFileData();
+	void displayTiles(sf::RenderWindow &window);
 
-	int mode;
-	
+	std::fstream dataFile;
+
+	std::vector<GroupsTile> tilesLibrary;
+
 	Button homeButton;
-	Button bottomButton;
+
 
 };

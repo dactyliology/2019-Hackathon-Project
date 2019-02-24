@@ -1,6 +1,6 @@
 #include "DetailsScreen.h"
 
-DetailsScreen::DetailsScreen(GroupsTile &newTile)
+DetailsScreen::DetailsScreen(GroupsTile &newTile, int chooseMode)
 {
 	for (int i = 0; i < 4; i++)
 		textSections[i][0].setStyle(sf::Text::Style::Bold);
@@ -21,6 +21,8 @@ DetailsScreen::DetailsScreen(GroupsTile &newTile)
 	textSections[2][1].setPosition(100, 550);
 	textSections[3][1].setString(newTile.rating);
 	textSections[3][1].setPosition(100, 690);
+
+	mode = chooseMode;
 }
 
 
@@ -55,10 +57,14 @@ void DetailsScreen::loadContent()
 		std::cout << "Could not load details screen background" << std::endl;
 
 	homeButton.loadContent(HOME_BUTTON);
-	backButton.loadContent(BACK_BUTTON);
+
+	if (mode == 0) // for myGroups
+		bottomButton.loadContent(BACK_BUTTON);
+	else if (mode == 1) // for exploreGroups
+		bottomButton.loadContent(ADD_BUTTON);
 
 	homeButton.setPosition(450, 25);
-	backButton.setPosition(199, 800);
+	bottomButton.setPosition(199, 800);
 
 }
 
@@ -73,8 +79,10 @@ void DetailsScreen::update(sf::RenderWindow &window, sf::Event event)
 
 	if (input.mouseClick(sf::Mouse::Left) && input.mouseHover(homeButton, window))
 		ScreenManager::getInstance().addScreen(new HomeScreen);
-	if (input.mouseClick(sf::Mouse::Left) && input.mouseHover(backButton, window))
+	if (input.mouseClick(sf::Mouse::Left) && input.mouseHover(bottomButton, window))
+	{
 		ScreenManager::getInstance().addScreen(new myGroupsScreen);
+	}
 
 }
 
@@ -87,5 +95,5 @@ void DetailsScreen::draw(sf::RenderWindow &window)
 			window.draw(textSections[i][j]);
 	}
 	window.draw(homeButton);
-	window.draw(backButton);
+	window.draw(bottomButton);
 }
