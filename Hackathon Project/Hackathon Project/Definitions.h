@@ -24,8 +24,8 @@
 
 /////////////////////////////////////////////////////////
 
-#define BUTTON_ORIGINAL_COLOR sf::Color::White
-#define BUTTON_HOVER_COLOR sf::Color::Yellow
+#define BUTTON_ORIGINAL_COLOR sf::Color(255, 255, 255)
+#define BUTTON_HOVER_COLOR sf::Color(248, 203, 173)
 
 ///////////////////////////////// BUTTON IMAGES ////////////////////////////
 #define MYGROUPS_BUTTON "myGroupsButton.png"

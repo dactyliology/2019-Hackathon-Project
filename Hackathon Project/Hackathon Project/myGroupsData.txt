@@ -1,2 +1,4 @@
 Statistics,225,STAT,http:/discord.gg,5
+Mathematics,173,MATH,calculusishard.org,3.5
+Statistics,225,STAT,http:/discord.gg,5
 Chemistry,105,CHEM,http:/discord.gg,4.9
