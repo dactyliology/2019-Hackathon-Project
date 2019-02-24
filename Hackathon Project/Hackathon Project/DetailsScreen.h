@@ -21,7 +21,8 @@ private:
 	int mode;
 	
 	Button homeButton;
-	Button bottomButton;
+	Button addButton;
+	Button backButton;
 
 	GroupsTile tile;
 

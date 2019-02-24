@@ -100,5 +100,8 @@
     <Text Include="TileLibrary.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="README.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

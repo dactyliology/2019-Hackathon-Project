@@ -1,1 +1,8 @@
-Mathematics,216,MATH,www.math.org,4.5
+Chemistry,105,CHEM,http:/discord.gg,4.9
+Computer Science,223,CPTS,http:/discord.gg,5
+Engineering,448,ENGR,www.edison.com,4.8
+Mathematics,173,MATH,calculusishard.org,3.5
+Marketing,101,MKTG,http:/discord.gg,4.5
+Political Science,323,POLS,http:/discord.gg,5
+Statistics,225,STAT,http:/discord.gg,5
+University Writing,302,WRIT,www.write.com,2

@@ -21,6 +21,4 @@ private:
 	std::vector<GroupsTile> tilesLibrary;
 
 	Button homeButton;
-
-
 };

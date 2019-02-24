@@ -59,14 +59,18 @@ void DetailsScreen::loadContent()
 		std::cout << "Could not load details screen background" << std::endl;
 
 	homeButton.loadContent(HOME_BUTTON);
-
-	if (mode == 0) // for myGroups
-		bottomButton.loadContent(BACK_BUTTON);
-	else if (mode == 1) // for exploreGroups
-		bottomButton.loadContent(ADD_BUTTON);
+	backButton.loadContent(BACK_BUTTON);
 
 	homeButton.setPosition(450, 25);
-	bottomButton.setPosition(199, 800);
+
+	if (mode == 1)
+	{
+		addButton.loadContent(ADD_BUTTON);
+		addButton.setPosition(275, 800);
+		backButton.setPosition(100, 800);
+	}
+	else if (mode == 0)
+		backButton.setPosition(199, 800);
 
 }
 
@@ -81,14 +85,11 @@ void DetailsScreen::update(sf::RenderWindow &window, sf::Event event)
 
 	if (input.mouseClick(sf::Mouse::Left) && input.mouseHover(homeButton, window))
 		ScreenManager::getInstance().addScreen(new HomeScreen);
-	if (input.mouseClick(sf::Mouse::Left) && input.mouseHover(bottomButton, window))
-	{
-		if (mode == 1) // need to modify myGroups vector to add new tile from library
+	if (input.mouseClick(sf::Mouse::Left) && input.mouseHover(backButton, window))
+			ScreenManager::getInstance().addScreen(new ExploreGroupsScreen);
+	if (mode == 1)
+		if (input.mouseClick(sf::Mouse::Left) && input.mouseHover(addButton, window))
 			ScreenManager::getInstance().addScreen(new myGroupsScreen(tile));
-		else if (mode == 0)
-			ScreenManager::getInstance().addScreen(new myGroupsScreen);
-	}
-
 }
 
 void DetailsScreen::draw(sf::RenderWindow &window)
@@ -100,5 +101,7 @@ void DetailsScreen::draw(sf::RenderWindow &window)
 			window.draw(textSections[i][j]);
 	}
 	window.draw(homeButton);
-	window.draw(bottomButton);
+	window.draw(backButton);
+	if (mode == 1)
+		window.draw(addButton);
 }

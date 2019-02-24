@@ -178,6 +178,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="myGroupsData.txt" />
+    <Text Include="README.txt" />
     <Text Include="TileLibrary.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
