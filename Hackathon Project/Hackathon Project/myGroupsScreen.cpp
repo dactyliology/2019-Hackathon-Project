@@ -41,6 +41,8 @@ void myGroupsScreen::loadContent()
 	homeButton.loadContent(HOME_BUTTON);
 	homeButton.setPosition(450, 25);
 
+	myGroupsHeader.loadContent(MYGROUPS_HEADER);
+
 	view.setSize(508, 900);
 	view.setCenter(254, 450);
 }
@@ -82,23 +84,34 @@ void myGroupsScreen::update(sf::RenderWindow &window, sf::Event event)
 
 	if (myGroupsTiles.size() > 6)
 	{
+		sf::Vector2i coordsPos = window.mapCoordsToPixel(backgroundSprite.getPosition());
+
 		if (sf::Mouse::getPosition(window).y < 100
 			&& sf::Mouse::getPosition(window).y > 0
-			&& window.mapCoordsToPixel(backgroundSprite.getPosition()).y <= 0)
+			&& coordsPos.y <= 0)
+		{
 			view.move(0, -0.25); // moves up
-		else if (sf::Mouse::getPosition(window).y < 900
-			&& sf::Mouse::getPosition(window).y > 800)
+			homeButton.move(0, -0.25);
+			myGroupsHeader.move(0, -0.25);
+		}
+		else if (sf::Mouse::getPosition(window).y > 800
+			&& coordsPos.y > -1 * (myGroupsTiles[myGroupsTiles.size() - 1].getPosition().y + myGroupsTiles[0].getGlobalBounds().height) + 850)
+		{
 			view.move(0, 0.25); // move down
+			homeButton.move(0, 0.25);
+			myGroupsHeader.move(0, 0.25);
+		}
 	}
+
 }
 
 void myGroupsScreen::draw(sf::RenderWindow &window)
 {
 	window.draw(backgroundSprite);
 	displayTiles(window);
-	window.draw(homeButton);
-
 	window.setView(view);
+	window.draw(myGroupsHeader);
+	window.draw(homeButton);
 }
 
 void myGroupsScreen::loadFileData()

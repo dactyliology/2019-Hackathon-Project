@@ -55,6 +55,8 @@ void HomeScreen::update(sf::RenderWindow &window, sf::Event event)
 
 void HomeScreen::draw(sf::RenderWindow &window)
 {
+	window.setView(window.getDefaultView()); // reset view
+
 	window.draw(backgroundSprite);
 	window.draw(myGroupsButton);
 	window.draw(exploreButton);

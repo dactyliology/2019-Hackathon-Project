@@ -34,6 +34,7 @@ private:
 	std::fstream dataFile; // file to get and read group data
 
 	Button homeButton;
+	Button myGroupsHeader;
 
 	sf::View view; // to facilitate scrolling
 };

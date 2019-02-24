@@ -34,3 +34,4 @@
 #define HOME_BUTTON "HomeButton.png"
 #define BACK_BUTTON "BackButton.png"
 #define ADD_BUTTON "AddButton.png"
+#define MYGROUPS_HEADER "MyGroupsHeader.png"

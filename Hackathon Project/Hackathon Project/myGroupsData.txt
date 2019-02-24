@@ -1,3 +1,4 @@
+Mathematics,173,MATH,calculusishard.org,3.5
 Political Science,323,POLS,http:/discord.gg,5
 Computer Science,223,CPTS,http:/discord.gg,5
 Marketing,101,MKTG,http:/discord.gg,4.5
