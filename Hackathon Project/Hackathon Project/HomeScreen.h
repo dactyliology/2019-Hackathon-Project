@@ -15,5 +15,4 @@ public:
 private:
 	Button myGroupsButton;
 	Button exploreButton;
-
 };

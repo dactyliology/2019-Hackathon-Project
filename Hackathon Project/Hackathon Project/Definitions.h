@@ -20,7 +20,7 @@
 #define HOMESCREEN "HomeScreen.png"
 #define MYGROUPS_SCREEN "LongBackground.png"
 #define DETAILS_SCREEN "DetailsScreen.png"
-#define EXPLOREGROUPS_SCREEN "ExploreGroups.png"
+#define EXPLOREGROUPS_SCREEN "LongBackground.png"
 
 /////////////////////////////////////////////////////////
 
@@ -35,3 +35,4 @@
 #define BACK_BUTTON "BackButton.png"
 #define ADD_BUTTON "AddButton.png"
 #define MYGROUPS_HEADER "MyGroupsHeader.png"
+#define EXPLOREGROUPS_HEADER "ExploreGroupsHeader.png"

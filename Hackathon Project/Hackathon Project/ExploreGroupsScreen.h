@@ -20,5 +20,8 @@ private:
 
 	std::vector<GroupsTile> tilesLibrary;
 
+	sf::View view;
+
 	Button homeButton;
+	Button exploreGroupsHeader;
 };
