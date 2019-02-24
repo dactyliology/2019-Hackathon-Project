@@ -12,6 +12,8 @@ public:
 	// Calculates where the groupTile should go based on its pos in a 1D array
 	void setPositionFromArrayIndex(int index, int gap, int offset);
 
+	void operator=(GroupsTile &rhs);
+
 	// Data members
 	std::string department;
 	std::string classNumber;

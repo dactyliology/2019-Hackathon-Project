@@ -38,6 +38,7 @@ int main()
 		window.draw(fade);
 
 		window.display();
+
 	}
 
 	return 0;

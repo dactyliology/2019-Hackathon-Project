@@ -45,6 +45,9 @@
     <ClCompile Include="GroupsTile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DetailsScreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Definitions.h">
@@ -78,6 +81,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GroupsTile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DetailsScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

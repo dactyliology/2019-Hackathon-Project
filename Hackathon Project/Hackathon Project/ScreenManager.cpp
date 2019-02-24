@@ -11,6 +11,11 @@ void ScreenManager::initialize()
 {
 	currentScreen = new TitleScreen();
 	isTransition = false;
+
+	appScreens[0] = new TitleScreen;
+	appScreens[1] = new HomeScreen;
+	appScreens[2] = new myGroupsScreen;
+	//appScreens[3] = new exploreGroupsScreen;
 }
 
 void ScreenManager::addScreen(Screen * screen)

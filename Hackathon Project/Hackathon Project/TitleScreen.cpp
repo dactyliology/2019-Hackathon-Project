@@ -21,7 +21,10 @@ void TitleScreen::update(sf::RenderWindow &window, sf::Event event)
 	input.update(event);
 
 	if (input.mouseClick(sf::Mouse::Button::Left)) // if user clicks left mouse
-		ScreenManager::getInstance().addScreen(new HomeScreen);
+	{
+		Screen *nextScreen = ScreenManager::getInstance().appScreens[1]; // home screen
+		ScreenManager::getInstance().addScreen(nextScreen);
+	}
 }
 
 void TitleScreen::draw(sf::RenderWindow & window)

@@ -48,6 +48,11 @@ void myGroupsScreen::update(sf::RenderWindow &window, sf::Event event)
 	}
 
 	// if a tile is clicked, open details page
+	for (int i = 0; i < myGroupsTiles.size(); i++)
+	{
+		if (input.mouseClick(sf::Mouse::Left) && input.mouseHover(myGroupsTiles[i], window))
+			ScreenManager::getInstance().addScreen(new DetailsScreen); // keeps closing unexpectedly
+	}
 
 	// if home button is clicked, go back to home page
 

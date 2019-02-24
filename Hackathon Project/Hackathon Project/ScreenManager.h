@@ -3,6 +3,7 @@
 #include "TitleScreen.h"
 #include "HomeScreen.h"
 #include "myGroupsScreen.h"
+#include "DetailsScreen.h"
 
 #define SCREEN_WIDTH 508
 #define SCREEN_HEIGHT 900
@@ -21,6 +22,8 @@ public:
 	void addScreen(Screen *screen);
 
 	double getAlpha();
+
+	Screen *appScreens[4];
 
 
 protected:

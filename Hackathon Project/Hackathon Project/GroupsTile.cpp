@@ -26,6 +26,15 @@ void GroupsTile::setPositionFromArrayIndex(int index, int gap, int offset)
 	this->setPosition(x, y);
 }
 
+void GroupsTile::operator=(GroupsTile &rhs)
+{
+	this->department = rhs.department;
+	this->classNumber = rhs.classNumber;
+	this->classAbbreviation = rhs.classAbbreviation;
+	this->contactLink = rhs.contactLink;
+	this->rating = rhs.rating;
+}
+
 std::fstream & operator >> (std::fstream &lhs, GroupsTile &rhs)
 {
 	std::getline(lhs, rhs.department, ',');

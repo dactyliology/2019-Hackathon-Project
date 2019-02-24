@@ -19,6 +19,7 @@
 #define TITLESCREEN "TitleScreen.png"
 #define HOMESCREEN "HomeScreen.png"
 #define MYGROUPS_SCREEN "MyGroupsScreen.png"
+#define DETAILS_SCREEN "DetailsScreen.png"
 
 /////////////////////////////////////////////////////////
 
