@@ -23,6 +23,8 @@ DetailsScreen::DetailsScreen(GroupsTile &newTile, int chooseMode)
 	textSections[3][1].setPosition(100, 690);
 
 	mode = chooseMode;
+
+	tile = newTile;
 }
 
 
@@ -81,7 +83,10 @@ void DetailsScreen::update(sf::RenderWindow &window, sf::Event event)
 		ScreenManager::getInstance().addScreen(new HomeScreen);
 	if (input.mouseClick(sf::Mouse::Left) && input.mouseHover(bottomButton, window))
 	{
-		ScreenManager::getInstance().addScreen(new myGroupsScreen);
+		if (mode == 1) // need to modify myGroups vector to add new tile from library
+			ScreenManager::getInstance().addScreen(new myGroupsScreen(tile));
+		else if (mode == 0)
+			ScreenManager::getInstance().addScreen(new myGroupsScreen);
 	}
 
 }

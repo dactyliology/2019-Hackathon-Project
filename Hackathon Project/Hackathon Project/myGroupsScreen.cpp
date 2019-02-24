@@ -1,5 +1,16 @@
 #include "myGroupsScreen.h"
 
+myGroupsScreen::myGroupsScreen()
+{
+
+}
+
+myGroupsScreen::myGroupsScreen(GroupsTile & newTile)
+{
+	myGroupsTiles.push_back(newTile);
+}
+
+
 void myGroupsScreen::loadContent()
 {
 	// load background image

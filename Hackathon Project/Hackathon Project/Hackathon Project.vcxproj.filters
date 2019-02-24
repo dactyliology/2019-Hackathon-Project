@@ -94,7 +94,11 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="myGroupsData.txt" />
-    <Text Include="TileLibrary.txt" />
+    <Text Include="myGroupsData.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="TileLibrary.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

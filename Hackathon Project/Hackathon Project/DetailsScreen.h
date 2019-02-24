@@ -23,4 +23,6 @@ private:
 	Button homeButton;
 	Button bottomButton;
 
+	GroupsTile tile;
+
 };

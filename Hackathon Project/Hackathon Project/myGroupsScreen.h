@@ -13,6 +13,8 @@
 class myGroupsScreen : public Screen
 {
 public:
+	myGroupsScreen();
+	myGroupsScreen(GroupsTile & newTile);
 	void loadContent();
 	void unloadContent();
 	void update(sf::RenderWindow &window, sf::Event event);
