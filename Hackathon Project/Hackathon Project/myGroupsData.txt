@@ -1,2 +1,3 @@
-computer science,121,cpts,contactlink,5
-buisiness,102,bs,contactLInk,3
+political science,403,POLS,contact,4
+buisiness,102,CPTS,contactLink,3
+computer science,121,CPTS,contactLink,5

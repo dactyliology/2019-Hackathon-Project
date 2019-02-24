@@ -19,7 +19,10 @@ public:
 	std::string contactLink;
 	std::string rating;
 
+	sf::Text tileText;
+
 private:
+	sf::Font font;
 	sf::Texture tileTexture;
 };
 

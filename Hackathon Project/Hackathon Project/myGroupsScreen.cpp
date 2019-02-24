@@ -14,13 +14,19 @@ void myGroupsScreen::loadContent()
 	// reads file data into the vector of tiles
 	loadFileData();
 
-	// set tile images
+	// set tile images & tileText
 	for (int i = 0; i < myGroupsTiles.size(); i++)
 		myGroupsTiles[i].loadContent();
 
-	// set tile positions
+	// set tile positions & tileText positions
 	for (int i = 0; i < myGroupsTiles.size(); i++)
+	{
 		myGroupsTiles[i].setPositionFromArrayIndex(i, GAP, OFFSET);
+
+		// center text on tile
+		myGroupsTiles[i].tileText.setPosition(myGroupsTiles[i].getPosition().x, myGroupsTiles[i].getPosition().y + 30);
+	}
+
 }
 
 void myGroupsScreen::unloadContent()
@@ -41,8 +47,9 @@ void myGroupsScreen::update(sf::RenderWindow &window, sf::Event event)
 			myGroupsTiles[i].setColor(BUTTON_ORIGINAL_COLOR);
 	}
 
-
 	// if a tile is clicked, open details page
+
+	// if home button is clicked, go back to home page
 
 	// implement scrolling if page gets too long
 }
@@ -73,7 +80,12 @@ void myGroupsScreen::saveFileData()
 	dataFile.open("myGroupsData.txt");
 
 	for (int i = 0; i < myGroupsTiles.size(); i++)
-		dataFile << myGroupsTiles[i];
+	{
+		if (i == myGroupsTiles.size() - 1)
+			dataFile << myGroupsTiles[i];
+		else
+			dataFile << myGroupsTiles[i] << std::endl; // prevent extra newline at the end
+	}
 
 	dataFile.close();
 }
@@ -81,5 +93,8 @@ void myGroupsScreen::saveFileData()
 void myGroupsScreen::displayTiles(sf::RenderWindow &window)
 {
 	for (int i = 0; i < myGroupsTiles.size(); i++)
+	{
 		window.draw(myGroupsTiles[i]);
+		window.draw(myGroupsTiles[i].tileText);
+	}
 }

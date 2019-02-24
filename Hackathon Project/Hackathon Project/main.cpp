@@ -22,7 +22,10 @@ int main()
 		while (window.pollEvent(event))
 		{
 			if (event.type == sf::Event::Closed || event.key.code == sf::Keyboard::Key::Escape)
+			{
+				//ScreenManager::getInstance().unloadContent();
 				window.close();
+			}
 		}
 
 		window.clear();

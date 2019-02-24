@@ -9,6 +9,13 @@ void GroupsTile::loadContent()
 	}
 	else
 		std::cout << "Could not load Groups Tile image" << std::endl;
+
+	if (font.loadFromFile(FONT))
+		tileText.setFont(font);
+	tileText.setColor(TEXT_COLOR);
+	tileText.setCharacterSize(50);
+	tileText.setStyle(sf::Text::Style::Bold);
+	tileText.setString("  " + this->classAbbreviation + '\n' + "   " + this->classNumber);
 }
 
 void GroupsTile::setPositionFromArrayIndex(int index, int gap, int offset)
@@ -36,7 +43,7 @@ std::fstream & operator << (std::fstream &lhs, GroupsTile &rhs)
 		<< rhs.classNumber << ','
 		<< rhs.classAbbreviation << ','
 		<< rhs.contactLink << ','
-		<< rhs.rating << std::endl;	
+		<< rhs.rating;
 
 	return lhs;
 }
