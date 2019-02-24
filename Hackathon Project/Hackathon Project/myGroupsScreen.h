@@ -30,4 +30,6 @@ private:
 	void displayTiles(sf::RenderWindow &window);
 
 	std::fstream dataFile; // file to get and read group data
+
+	Button homeButton;
 };

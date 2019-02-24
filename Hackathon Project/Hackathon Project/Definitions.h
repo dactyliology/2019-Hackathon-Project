@@ -30,3 +30,4 @@
 #define MYGROUPS_BUTTON "myGroupsButton.png"
 #define EXPLORE_BUTTON "ExploreButton.png"
 #define GROUPS_TILE "GroupsTile.png"
+#define HOME_BUTTON "HomeButton.png"

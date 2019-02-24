@@ -43,7 +43,9 @@ void HomeScreen::update(sf::RenderWindow &window, sf::Event event)
 
 	// buttons are clicked...
 	if (input.mouseClick(sf::Mouse::Button::Left) && input.mouseHover(myGroupsButton, window))
+	{
 		ScreenManager::getInstance().addScreen(new myGroupsScreen);
+	}
 
 	if (input.mouseClick(sf::Mouse::Button::Left) && input.mouseHover(exploreButton, window))
 	{

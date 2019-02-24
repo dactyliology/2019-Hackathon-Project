@@ -22,9 +22,8 @@ public:
 	void addScreen(Screen *screen);
 
 	double getAlpha();
-
-	Screen *appScreens[4];
-
+	void alphaReset();
+	
 
 protected:
 private:

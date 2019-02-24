@@ -27,6 +27,8 @@ void myGroupsScreen::loadContent()
 		myGroupsTiles[i].tileText.setPosition(myGroupsTiles[i].getPosition().x, myGroupsTiles[i].getPosition().y + 30);
 	}
 
+	homeButton.loadContent(HOME_BUTTON);
+	homeButton.setPosition(468, 0);
 }
 
 void myGroupsScreen::unloadContent()
@@ -51,10 +53,16 @@ void myGroupsScreen::update(sf::RenderWindow &window, sf::Event event)
 	for (int i = 0; i < myGroupsTiles.size(); i++)
 	{
 		if (input.mouseClick(sf::Mouse::Left) && input.mouseHover(myGroupsTiles[i], window))
-			ScreenManager::getInstance().addScreen(new DetailsScreen); // keeps closing unexpectedly
+		{
+			ScreenManager::getInstance().addScreen(new DetailsScreen(myGroupsTiles[i]));
+		}
 	}
 
 	// if home button is clicked, go back to home page
+	if (input.mouseClick(sf::Mouse::Left) && input.mouseHover(homeButton, window))
+	{
+		ScreenManager::getInstance().addScreen(new HomeScreen);
+	}
 
 	// implement scrolling if page gets too long
 }

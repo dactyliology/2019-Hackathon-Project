@@ -9,13 +9,8 @@ ScreenManager & ScreenManager::getInstance()
 
 void ScreenManager::initialize()
 {
-	currentScreen = new TitleScreen();
+	currentScreen = new TitleScreen;
 	isTransition = false;
-
-	appScreens[0] = new TitleScreen;
-	appScreens[1] = new HomeScreen;
-	appScreens[2] = new myGroupsScreen;
-	//appScreens[3] = new exploreGroupsScreen;
 }
 
 void ScreenManager::addScreen(Screen * screen)
@@ -67,7 +62,7 @@ void ScreenManager::transition(sf::Time deltaTime)
 			currentScreen->loadContent();
 			newScreen = nullptr;
 		}
-		else if (fade.getAlpha() <= 0.0)
+		else if (fade.getAlpha() <= 0.0) // stop transitioning
 		{
 			isTransition = false;
 			fade.setActive(false);
@@ -79,5 +74,11 @@ double ScreenManager::getAlpha()
 {
 	return fade.getAlpha();
 }
+
+void ScreenManager::alphaReset()
+{
+	fade.setAlpha(1.0f);
+}
+
 
 

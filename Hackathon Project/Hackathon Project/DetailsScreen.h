@@ -7,16 +7,17 @@
 class DetailsScreen : public Screen
 {
 public:
+	DetailsScreen(GroupsTile &newTile);
 	void loadContent();
-	void getTileData(GroupsTile &newTile);
 	void unloadContent();
 	void update(sf::RenderWindow &window, sf::Event event);
 	void draw(sf::RenderWindow &window);
 
 private:
 	sf::Font font;
-	sf::Text detailsText;
-
-	GroupsTile tile;
+	sf::Text textSections[4][2];
+	/*sf::Text nameHeader;
+	sf::Text departmentHeader;
+	sf::Text linkHeader;*/
 
 };
