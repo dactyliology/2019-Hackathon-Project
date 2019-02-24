@@ -85,11 +85,16 @@ void DetailsScreen::update(sf::RenderWindow &window, sf::Event event)
 
 	if (input.mouseClick(sf::Mouse::Left) && input.mouseHover(homeButton, window))
 		ScreenManager::getInstance().addScreen(new HomeScreen);
-	if (input.mouseClick(sf::Mouse::Left) && input.mouseHover(backButton, window))
-			ScreenManager::getInstance().addScreen(new ExploreGroupsScreen);
+	if(mode == 0)
+		if (input.mouseClick(sf::Mouse::Left) && input.mouseHover(backButton, window))
+				ScreenManager::getInstance().addScreen(new myGroupsScreen);
 	if (mode == 1)
+	{
 		if (input.mouseClick(sf::Mouse::Left) && input.mouseHover(addButton, window))
 			ScreenManager::getInstance().addScreen(new myGroupsScreen(tile));
+		if (input.mouseClick(sf::Mouse::Left) && input.mouseHover(backButton, window))
+			ScreenManager::getInstance().addScreen(new ExploreGroupsScreen);
+	}
 }
 
 void DetailsScreen::draw(sf::RenderWindow &window)
