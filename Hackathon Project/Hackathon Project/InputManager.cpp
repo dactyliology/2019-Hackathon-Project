@@ -17,8 +17,3 @@ bool InputManager::mouseHover(sf::Sprite &object, sf::RenderWindow &window)
 
 	return globalBounds.contains(mouseWorldPos);
 }
-
-bool InputManager::mouseScroll(sf::Mouse::Wheel wheel)
-{
-	return false;
-}

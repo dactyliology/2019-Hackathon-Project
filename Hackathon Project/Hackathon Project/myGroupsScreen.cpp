@@ -40,6 +40,9 @@ void myGroupsScreen::loadContent()
 
 	homeButton.loadContent(HOME_BUTTON);
 	homeButton.setPosition(450, 25);
+
+	view.setSize(508, 900);
+	view.setCenter(254, 450);
 }
 
 void myGroupsScreen::unloadContent()
@@ -76,6 +79,17 @@ void myGroupsScreen::update(sf::RenderWindow &window, sf::Event event)
 	}
 
 	// implement scrolling if page gets too long
+
+	if (myGroupsTiles.size() > 6)
+	{
+		if (sf::Mouse::getPosition(window).y < 100
+			&& sf::Mouse::getPosition(window).y > 0
+			&& window.mapCoordsToPixel(backgroundSprite.getPosition()).y <= 0)
+			view.move(0, -0.25); // moves up
+		else if (sf::Mouse::getPosition(window).y < 900
+			&& sf::Mouse::getPosition(window).y > 800)
+			view.move(0, 0.25); // move down
+	}
 }
 
 void myGroupsScreen::draw(sf::RenderWindow &window)
@@ -83,6 +97,8 @@ void myGroupsScreen::draw(sf::RenderWindow &window)
 	window.draw(backgroundSprite);
 	displayTiles(window);
 	window.draw(homeButton);
+
+	window.setView(view);
 }
 
 void myGroupsScreen::loadFileData()

@@ -99,6 +99,8 @@ void DetailsScreen::update(sf::RenderWindow &window, sf::Event event)
 
 void DetailsScreen::draw(sf::RenderWindow &window)
 {
+	window.setView(window.getDefaultView()); // resets view from previous scrolling page
+
 	window.draw(backgroundSprite);
 	for(int i = 0; i < 4; i++)
 	{

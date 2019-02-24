@@ -18,7 +18,7 @@
 
 #define TITLESCREEN "TitleScreen.png"
 #define HOMESCREEN "HomeScreen.png"
-#define MYGROUPS_SCREEN "MyGroupsScreen.png"
+#define MYGROUPS_SCREEN "LongBackground.png"
 #define DETAILS_SCREEN "DetailsScreen.png"
 #define EXPLOREGROUPS_SCREEN "ExploreGroups.png"
 
