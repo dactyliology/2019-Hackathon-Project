@@ -5,7 +5,7 @@ int main()
 {
 	sf::RenderWindow window(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, 32), "2019 CrimsonCode App");
 
-	sf::RectangleShape fade(sf::Vector2f(SCREEN_WIDTH, SCREEN_HEIGHT)); // black rectangle to facilitate screen fade animation
+	sf::RectangleShape fade(sf::Vector2f(SCREEN_WIDTH, 10000)); // black rectangle to facilitate screen fade animation
 	fade.setFillColor(sf::Color::White);
 
 	sf::Clock deltaClock;
@@ -23,7 +23,7 @@ int main()
 		{
 			if (event.type == sf::Event::Closed || event.key.code == sf::Keyboard::Key::Escape)
 			{
-				//ScreenManager::getInstance().unloadContent();
+				ScreenManager::getInstance().unloadContent();
 				window.close();
 			}
 		}

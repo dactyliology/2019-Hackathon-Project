@@ -1,9 +1,2 @@
-Political Science,323,POLS,http:/discord.gg,5
-Mathematics,173,MATH,calculusishard.org,3.5
-Political Science,323,POLS,http:/discord.gg,5
-Computer Science,223,CPTS,http:/discord.gg,5
-Marketing,101,MKTG,http:/discord.gg,4.5
-Mathematics,173,MATH,calculusishard.org,3.5
+Statistics,225,STAT,http:/discord.gg,5
 Chemistry,105,CHEM,http:/discord.gg,4.9
-Computer Science,223,CPTS,http:/discord.gg,5
-Mathematics,173,MATH,calculusishard.org,3.5

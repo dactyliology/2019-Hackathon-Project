@@ -28,5 +28,7 @@ void TitleScreen::update(sf::RenderWindow &window, sf::Event event)
 
 void TitleScreen::draw(sf::RenderWindow & window)
 {
+	window.setView(window.getDefaultView());
+
 	window.draw(backgroundSprite);
 }
